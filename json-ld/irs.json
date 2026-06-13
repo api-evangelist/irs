@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "@id": "https://www.irs.gov/",
+  "name": "Internal Revenue Service (IRS)",
+  "description": "The US Internal Revenue Service (IRS) provides REST APIs and Application-to-Application (A2A) interfaces for tax information access, identity verification, income verification, information return filing, and taxpayer account data.",
+  "url": "https://www.irs.gov/",
+  "logo": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+  "sameAs": [
+    "https://www.linkedin.com/company/irs",
+    "https://x.com/irsnews"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "developer support",
+    "url": "https://www.irs.gov/tax-professionals/get-an-api-client-id"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "IRS Developer APIs",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "IRS TIN Matching API",
+        "description": "Allows payers to submit Taxpayer Identification Number (TIN) and name combinations to be matched against IRS records before filing information returns. Supports interactive matching of up to 25 combinations with immediate results and bulk matching of up to 100,000 combinations with results within 24 hours.",
+        "url": "https://www.irs.gov/tax-professionals/taxpayer-identification-number-tin-matching",
+        "featureList": [
+          "TIN Matching",
+          "Taxpayer Identification",
+          "Information Returns",
+          "Validation"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "IRS Income Verification Express Service (IVES) API",
+        "description": "Application-to-Application (A2A) API allowing authorized participants such as lenders, banks, credit unions, and financial institutions to request IRS tax transcripts for income verification purposes.",
+        "url": "https://www.irs.gov/individuals/income-verification-express-service-for-participants",
+        "featureList": [
+          "Income Verification",
+          "Tax Transcripts",
+          "Mortgage",
+          "Lending",
+          "Financial Services"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "IRS Information Return Intake System (IRIS) API",
+        "description": "Application-to-Application (A2A) API for electronic filing of 1099 series information returns directly with the IRS. Supports high-volume automated submission by software developers and large-scale filers.",
+        "url": "https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters",
+        "featureList": [
+          "1099 Filing",
+          "Information Returns",
+          "e-File",
+          "Tax Filing"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "IRS Modernized e-File (MeF) API",
+        "description": "Application-to-Application (A2A) system enabling authorized software developers and transmitters to electronically submit tax returns directly to the IRS. Supports individual and business tax forms.",
+        "url": "https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters",
+        "featureList": [
+          "e-File",
+          "Tax Returns",
+          "Electronic Filing",
+          "Software Developers"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "WebAPI",
+        "name": "IRS Transcript Delivery System (TDS) API",
+        "description": "e-Services API allowing authorized tax professionals and institutions to retrieve tax transcripts programmatically. Part of the IRS e-Services suite.",
+        "url": "https://www.irs.gov/tax-professionals/get-an-api-client-id",
+        "featureList": [
+          "Tax Transcripts",
+          "e-Services",
+          "Tax Professionals"
+        ]
+      }
+    ]
+  }
+}
