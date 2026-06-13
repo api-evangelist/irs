@@ -1,0 +1,165 @@
+aid: irs
+name: IRS
+description: >-
+  The US Internal Revenue Service (IRS) provides REST APIs and Application-to-Application
+  (A2A) interfaces for tax information access, identity verification, income verification,
+  information return filing, and taxpayer account data. Authorized applications can
+  integrate with IRS e-Services for TIN matching, the Transcript Delivery System (TDS),
+  the Income Verification Express Service (IVES), the Information Return Intake System
+  (IRIS) for 1099 series filings, and the Modernized e-File (MeF) system for electronic
+  tax return submission. Access requires enrollment in IRS e-Services and obtaining
+  an API client ID.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/irs/refs/heads/main/apis.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+tags:
+  - IRS
+  - Tax
+  - Federal Government
+  - TIN Matching
+  - Income Verification
+  - Information Returns
+  - e-File
+  - Identity Verification
+  - Taxpayer
+apis:
+  - aid: irs:tin-matching
+    name: IRS TIN Matching API
+    description: >-
+      Allows payers to submit Taxpayer Identification Number (TIN) and name combinations
+      to be matched against IRS records before filing information returns. Supports
+      interactive matching of up to 25 combinations with immediate results and bulk
+      matching of up to 100,000 combinations with results within 24 hours. Available
+      as part of IRS e-Services.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.irs.gov/tax-professionals/taxpayer-identification-number-tin-matching
+    baseURL: https://la.www4.irs.gov
+    tags:
+      - TIN Matching
+      - Taxpayer Identification
+      - Information Returns
+      - Validation
+    properties:
+      - type: Documentation
+        url: https://www.irs.gov/tax-professionals/taxpayer-identification-number-tin-matching
+      - type: GettingStarted
+        url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+  - aid: irs:ives
+    name: IRS Income Verification Express Service (IVES) API
+    description: >-
+      Application-to-Application (A2A) API allowing authorized participants such as
+      lenders, banks, credit unions, and financial institutions to request IRS tax
+      transcripts for income verification purposes. Supports high-volume automated
+      transcript requests with delivery in hours. Charges $4 per transcript requested.
+      Requires IVES participant enrollment and API client ID.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.irs.gov/individuals/income-verification-express-service-for-participants
+    baseURL: https://la.www4.irs.gov
+    tags:
+      - Income Verification
+      - Tax Transcripts
+      - Mortgage
+      - Lending
+      - Financial Services
+    properties:
+      - type: Documentation
+        url: https://www.irs.gov/individuals/income-verification-express-service-for-participants
+      - type: GettingStarted
+        url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+      - type: Pricing
+        url: plans/irs-plans-pricing.yml
+  - aid: irs:iris
+    name: IRS Information Return Intake System (IRIS) API
+    description: >-
+      Application-to-Application (A2A) API for electronic filing of 1099 series
+      information returns directly with the IRS. Supports high-volume automated
+      submission by software developers and large-scale filers. Specifications
+      are documented in IRS Publication 5718 (IRIS Electronic Filing A2A Specifications).
+      Launched in January 2023 as the successor to the FIRE system.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.irs.gov/newsroom/irs-opens-free-portal-to-file-information-returns-new-electronic-option-can-reduce-millions-of-paper-forms-1099-estimated-to-be-filed-by-businesses-in-2023
+    baseURL: https://la.www4.irs.gov
+    tags:
+      - 1099
+      - Information Returns
+      - e-File
+      - Tax Filing
+    properties:
+      - type: Documentation
+        url: https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters
+      - type: GettingStarted
+        url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+  - aid: irs:mef
+    name: IRS Modernized e-File (MeF) API
+    description: >-
+      Application-to-Application (A2A) system enabling authorized software developers
+      and transmitters to electronically submit tax returns directly to the IRS.
+      Supports individual and business tax forms including Form 2290, Form 720,
+      Form 8849, and more. Requires TLS 1.2 or higher. Technical specifications
+      available in IRS Publication 4164. Current WSDL version is R10.9 for
+      tax year 2025/processing year 2026.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters
+    baseURL: https://la.www4.irs.gov
+    tags:
+      - e-File
+      - Tax Returns
+      - Electronic Filing
+      - Software Developers
+    properties:
+      - type: Documentation
+        url: https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters
+      - type: GettingStarted
+        url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+      - type: StatusPage
+        url: https://www.irs.gov/e-file-providers/modernized-e-file-mef-status
+  - aid: irs:tds
+    name: IRS Transcript Delivery System (TDS) API
+    description: >-
+      e-Services API allowing authorized tax professionals and institutions to
+      retrieve tax transcripts programmatically. Part of the IRS e-Services
+      suite alongside TIN Matching and the Secure Object Repository (SOR).
+      Requires API client ID obtained through IRS e-Services enrollment.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.irs.gov/tax-professionals/get-an-api-client-id
+    baseURL: https://la.www4.irs.gov
+    tags:
+      - Tax Transcripts
+      - e-Services
+      - Tax Professionals
+    properties:
+      - type: Documentation
+        url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+      - type: GettingStarted
+        url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+common:
+  - type: Website
+    url: https://www.irs.gov/
+  - type: Documentation
+    url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+  - type: GettingStarted
+    url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+  - type: DeveloperPortal
+    url: https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters
+  - type: StatusPage
+    url: https://www.irs.gov/e-file-providers/modernized-e-file-mef-status
+  - type: Plans
+    url: plans/irs-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/irs-rate-limits.yml
+  - type: FinOps
+    url: finops/irs-finops.yml
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/irs
+  - type: X
+    url: https://x.com/irsnews
+  - type: Blog
+    url: https://www.irs.gov/newsroom
+  - type: TermsOfService
+    url: https://www.irs.gov/privacy-disclosure/irs-website-privacy-policy-statement
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,81 @@
+name: IRS API FinOps
+description: >-
+  Financial operations guidance for IRS API consumers. Most IRS APIs are
+  provided at no cost as a public service to authorized tax professionals,
+  software developers, and financial institutions. The primary cost-bearing
+  service is the Income Verification Express Service (IVES) at $4 per
+  transcript. Cost management focuses on IVES transcript volume control
+  and efficient batch usage of TIN Matching to reduce per-session overhead.
+url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+costs:
+  - api: IVES
+    name: IVES Transcript Fee
+    description: >-
+      The IRS charges $4 per tax transcript requested through IVES. This
+      is the only IRS API with a per-transaction fee. Monthly invoices
+      are issued on the 5th of each month for the prior month's usage.
+      Payment must be made electronically via credit card or electronic
+      funds transfer (EFT) through the IRS.gov payment portal.
+    amount: 4.00
+    currency: USD
+    unit: per transcript
+    billingCycle: monthly
+    url: https://www.irs.gov/individuals/income-verification-express-service-for-participants
+  - api: TIN Matching
+    name: TIN Matching - No Cost
+    description: >-
+      TIN Matching is provided free of charge to enrolled e-Services participants.
+      No per-call or per-batch fees apply.
+    amount: 0
+    currency: USD
+    unit: per call
+    url: https://www.irs.gov/tax-professionals/taxpayer-identification-number-tin-matching
+  - api: IRIS
+    name: IRIS 1099 Filing - No Cost
+    description: >-
+      The Information Return Intake System (IRIS) is provided free of charge
+      to authorized filers and software developers. No per-filing or per-record fees.
+    amount: 0
+    currency: USD
+    unit: per filing
+    url: https://www.irs.gov/newsroom/irs-opens-free-portal-to-file-information-returns-new-electronic-option-can-reduce-millions-of-paper-forms-1099-estimated-to-be-filed-by-businesses-in-2023
+  - api: MeF
+    name: MeF Electronic Filing - No Cost
+    description: >-
+      Modernized e-File (MeF) submission is provided free of charge to
+      authorized software developers and transmitters. No per-submission fees.
+    amount: 0
+    currency: USD
+    unit: per submission
+    url: https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters
+  - api: TDS
+    name: Transcript Delivery System - No Cost
+    description: >-
+      The Transcript Delivery System (TDS) is provided free of charge to
+      enrolled e-Services participants such as authorized tax professionals.
+    amount: 0
+    currency: USD
+    unit: per request
+    url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+optimization:
+  - strategy: Batch TIN Matching
+    description: >-
+      Use Bulk TIN Matching (up to 100,000 combinations per submission) rather
+      than Interactive TIN Matching (25 per session) for large volume validations
+      to maximize throughput at no additional cost.
+  - strategy: Optimize IVES Transcript Requests
+    description: >-
+      Since IVES charges $4 per transcript, implement deduplication logic
+      to avoid requesting the same transcript multiple times. Cache transcripts
+      where appropriate within permitted use cases to reduce total costs.
+  - strategy: Monitor Monthly IVES Invoices
+    description: >-
+      IVES invoices are issued on the 5th of each month. Implement cost
+      tracking per IVES participant ID to allocate costs to business units
+      or client accounts. Set up alerts if monthly transcript volumes
+      exceed budgeted thresholds.
+  - strategy: Use IRIS for Free 1099 Filing
+    description: >-
+      Migrate 1099 series information return filing from the legacy FIRE
+      system to IRIS A2A. IRIS is free and the IRS is transitioning
+      filers to this platform.

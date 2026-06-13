@@ -1,0 +1,55 @@
+name: IRS API Plans and Pricing
+description: >-
+  IRS APIs are generally provided free of charge to authorized participants who
+  have enrolled in IRS e-Services. The primary exception is the Income Verification
+  Express Service (IVES), which charges a per-transcript fee. TIN Matching, IRIS
+  1099 filing, MeF electronic filing, and Transcript Delivery System access are
+  provided at no cost to enrolled participants. All services require IRS e-Services
+  enrollment and an API client ID.
+url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+plans:
+  - name: Free Tier (e-Services)
+    description: >-
+      Access to core IRS e-Services APIs at no cost for enrolled participants.
+      Includes TIN Matching (interactive and bulk), Transcript Delivery System (TDS),
+      Secure Object Repository (SOR), IRIS 1099 filing (A2A), and Modernized e-File
+      (MeF) submission. Requires e-Services enrollment and a valid API client ID.
+    url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+    pricing:
+      - type: FlatRate
+        amount: 0
+        currency: USD
+        period: month
+    features:
+      - TIN Matching (up to 25 interactive or 100,000 bulk per session)
+      - IRIS A2A for 1099 series information returns
+      - MeF electronic tax return submission
+      - Transcript Delivery System (TDS)
+      - Secure Object Repository (SOR)
+    limits:
+      - type: Authentication
+        value: API client ID + JWT Bearer token required
+  - name: IVES Participant Plan
+    description: >-
+      Pay-per-use access to the Income Verification Express Service (IVES) for
+      authorized lenders, banks, credit unions, and other financial institutions.
+      Charges $4 per tax transcript requested. Invoices are issued monthly on
+      the 5th of each month for the prior month's transactions. Payment is
+      required electronically via credit card or electronic funds transfer
+      through the IRS.gov payment portal.
+    url: https://www.irs.gov/individuals/income-verification-express-service-for-participants
+    pricing:
+      - type: PayPerUse
+        amount: 4.00
+        currency: USD
+        unit: transcript
+    features:
+      - Tax transcript delivery in hours (A2A requests)
+      - High-volume automated transcript requests
+      - SOR mailbox for transcript delivery
+      - Supports mortgage lending and income verification workflows
+    limits:
+      - type: Enrollment
+        value: Must be an authorized IVES participant
+      - type: Authentication
+        value: IVES participant ID (10 digits) + API client ID required

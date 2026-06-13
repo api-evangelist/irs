@@ -1,0 +1,53 @@
+name: IRS API Rate Limits
+description: >-
+  The IRS does not publicly publish specific numeric rate limits (requests per
+  second/minute) for its APIs. Known volume limits and operational constraints
+  are documented below based on publicly available IRS guidance. The IRS MeF
+  system includes a resiliency feature that allows the application to function
+  in a limited capacity during system outages. All APIs require TLS 1.2 or
+  higher for connections.
+url: https://www.irs.gov/tax-professionals/get-an-api-client-id
+rateLimits:
+  - api: TIN Matching (Interactive)
+    name: Interactive TIN Matching Session Limit
+    description: >-
+      Interactive TIN Matching allows verification of up to 25 TIN/name
+      combinations per session with immediate results.
+    limit: 25
+    unit: combinations per session
+    type: SessionLimit
+    url: https://www.irs.gov/tax-professionals/taxpayer-identification-number-tin-matching
+  - api: TIN Matching (Bulk)
+    name: Bulk TIN Matching Submission Limit
+    description: >-
+      Bulk TIN Matching allows submission of up to 100,000 TIN/name
+      combinations per request. Results are returned within 24 hours.
+    limit: 100000
+    unit: combinations per submission
+    type: BatchLimit
+    url: https://www.irs.gov/tax-professionals/taxpayer-identification-number-tin-matching
+  - api: MeF
+    name: MeF System Availability Window
+    description: >-
+      The Modernized e-File (MeF) system has defined annual availability windows.
+      Business tax return filing opens at 9 a.m. Eastern on approximately
+      January 13 each year. Individual tax return filing opens at 9 a.m. Eastern
+      on approximately January 26 each year. The system may operate in limited
+      capacity during outages.
+    type: AvailabilityWindow
+    url: https://www.irs.gov/e-file-providers/modernized-e-file-mef-status
+  - api: IVES
+    name: IVES Transcript Delivery SLA
+    description: >-
+      A2A transcript requests submitted through IVES are delivered within
+      hours. Fax-based requests have a 2-3 business day processing time.
+      No published numeric rate limit per API client, but bulk usage
+      requires IVES participant enrollment.
+    type: SLA
+    sla: hours (A2A)
+    url: https://www.irs.gov/individuals/income-verification-express-service-for-participants
+notes:
+  - The IRS does not publish explicit requests-per-second or requests-per-minute limits in public documentation.
+  - For specific rate limit guidance, contact the IRS e-Help Desk at 866-255-0654.
+  - All connections must use TLS 1.2 or higher with SHA-256 or higher cryptographic signatures.
+  - Authentication uses Client ID and signed JWT Bearer tokens (OAuth-style) to obtain access tokens.
