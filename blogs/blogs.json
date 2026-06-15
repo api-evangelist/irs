@@ -71,5 +71,17 @@
       "date": "2026-05-28",
       "description": "The IRS announced new features enabling taxpayers to view and submit Trump Account elections in Individual Accounts for tax-advantaged investing."
     }
-  ]
+  ],
+  "repo": "irs",
+  "feeds": [
+    {
+      "source": "https://x.com/irsnews",
+      "feed_url": "https://x.com/irsnews",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
