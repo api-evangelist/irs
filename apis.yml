@@ -10,7 +10,7 @@ description: >-
   tax return submission. Access requires enrollment in IRS e-Services and obtaining
   an API client ID.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/irs/refs/heads/main/apis.yml
 created: "2026-06-13"
 modified: "2026-06-13"
@@ -34,7 +34,7 @@ apis:
       interactive matching of up to 25 combinations with immediate results and bulk
       matching of up to 100,000 combinations with results within 24 hours. Available
       as part of IRS e-Services.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.irs.gov/tax-professionals/taxpayer-identification-number-tin-matching
     baseURL: https://la.www4.irs.gov
     tags:
@@ -55,7 +55,7 @@ apis:
       transcripts for income verification purposes. Supports high-volume automated
       transcript requests with delivery in hours. Charges $4 per transcript requested.
       Requires IVES participant enrollment and API client ID.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.irs.gov/individuals/income-verification-express-service-for-participants
     baseURL: https://la.www4.irs.gov
     tags:
@@ -79,7 +79,7 @@ apis:
       submission by software developers and large-scale filers. Specifications
       are documented in IRS Publication 5718 (IRIS Electronic Filing A2A Specifications).
       Launched in January 2023 as the successor to the FIRE system.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.irs.gov/newsroom/irs-opens-free-portal-to-file-information-returns-new-electronic-option-can-reduce-millions-of-paper-forms-1099-estimated-to-be-filed-by-businesses-in-2023
     baseURL: https://la.www4.irs.gov
     tags:
@@ -101,7 +101,7 @@ apis:
       Form 8849, and more. Requires TLS 1.2 or higher. Technical specifications
       available in IRS Publication 4164. Current WSDL version is R10.9 for
       tax year 2025/processing year 2026.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters
     baseURL: https://la.www4.irs.gov
     tags:
@@ -123,7 +123,7 @@ apis:
       retrieve tax transcripts programmatically. Part of the IRS e-Services
       suite alongside TIN Matching and the Secure Object Repository (SOR).
       Requires API client ID obtained through IRS e-Services enrollment.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.irs.gov/tax-professionals/get-an-api-client-id
     baseURL: https://la.www4.irs.gov
     tags:
