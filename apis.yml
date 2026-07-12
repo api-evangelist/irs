@@ -136,6 +136,8 @@ apis:
       - type: GettingStarted
         url: https://www.irs.gov/tax-professionals/get-an-api-client-id
 common:
+  - type: DomainSecurity
+    url: security/irs-domain-security.yml
   - type: Website
     url: https://www.irs.gov/
   - type: Documentation
