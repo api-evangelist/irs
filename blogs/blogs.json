@@ -2,13 +2,14 @@
   "repo": "irs",
   "feeds": [
     {
-      "source": "https://www.irs.gov/newsroom",
-      "feed_url": "",
-      "saved": 2,
-      "method": "agent-scrape"
+      "source": "https://x.com/irsnews",
+      "feed_url": "https://x.com/irsnews",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:50:27Z",
-  "post_count": 3,
-  "agent_pulled": "2026-06-27"
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 4,
+  "agent_pulled": "2026-07-04"
 }
