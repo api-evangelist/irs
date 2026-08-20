@@ -30,6 +30,16 @@ specificationVersion: '0.23'
 tags:
   - IRS
   - Tax
+  - Federal-Government
+  - TIN Matching
+  - Income Verification
+  - Information Returns
+  - E-File
+  - Identity Verification
+  - Taxpayer
+tags_raw:
+  - IRS
+  - Tax
   - Federal Government
   - TIN Matching
   - Income Verification
@@ -75,6 +85,12 @@ apis:
       - Tax Transcripts
       - Mortgage
       - Lending
+      - Financial-Services
+    tags_raw:
+      - Income Verification
+      - Tax Transcripts
+      - Mortgage
+      - Lending
       - Financial Services
     properties:
       - type: Documentation
@@ -97,6 +113,11 @@ apis:
     tags:
       - 1099
       - Information Returns
+      - E-File
+      - Tax Filing
+    tags_raw:
+      - 1099
+      - Information Returns
       - e-File
       - Tax Filing
     properties:
@@ -117,6 +138,11 @@ apis:
     humanURL: https://www.irs.gov/e-file-providers/information-and-technical-guidance-for-software-developers-and-transmitters
     baseURL: https://la.www4.irs.gov
     tags:
+      - E-File
+      - Tax Returns
+      - Electronic Filing
+      - Software Developers
+    tags_raw:
       - e-File
       - Tax Returns
       - Electronic Filing
