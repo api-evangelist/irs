@@ -41,13 +41,15 @@ specificationVersion: '0.23'
 tags:
   - IRS
   - Tax
-  - Federal-Government
+  - Federal Government
   - TIN Matching
   - Income Verification
   - Information Returns
   - E-File
   - Identity Verification
   - Taxpayer
+  - Finance
+  - Tax Filing
 tags_raw:
   - IRS
   - Tax
@@ -58,6 +60,9 @@ tags_raw:
   - e-File
   - Identity Verification
   - Taxpayer
+  - Federal-Government
+  - Finance
+  - Tax Filing
 apis:
   - aid: irs:tin-matching
     name: IRS TIN Matching API
@@ -96,13 +101,14 @@ apis:
       - Tax Transcripts
       - Mortgage
       - Lending
-      - Financial-Services
+      - Financial Services
     tags_raw:
       - Income Verification
       - Tax Transcripts
       - Mortgage
       - Lending
       - Financial Services
+      - Financial-Services
     properties:
       - type: Documentation
         url: https://www.irs.gov/individuals/income-verification-express-service-for-participants
@@ -211,6 +217,8 @@ common:
     url: https://www.irs.gov/newsroom
   - type: TermsOfService
     url: https://www.irs.gov/privacy-disclosure/irs-website-privacy-policy-statement
+  - type: GitHubOrganization
+    url: https://github.com/IRS-Public
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
