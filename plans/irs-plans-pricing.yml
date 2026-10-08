@@ -57,3 +57,21 @@ plans:
         value: Must be an authorized IVES participant
       - type: Authentication
         value: IVES participant ID (10 digits) + API client ID required
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Free Tier (e-Services)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: IVES Participant Plan
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
