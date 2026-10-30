@@ -64,33 +64,111 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The US Internal Revenue Service (IRS) provides REST and Application-to-Application (A2A) APIs for tax information access, income verification, information return filing, and taxpayer account data. Authorized applications can integrate with IRS e-Services for TIN matching, the Income Verification Express Service (IVES), the Information Return Intake System (IRIS) for 1099 series filings, the Modernized e-File (MeF) system, and the Transcript Delivery System (TDS).
+The US Internal Revenue Service (IRS) provides REST APIs and Application-to-Application (A2A) interfaces for tax information access, identity verification, income verification, information return filing, and taxpayer account data. Authorized applications can integrate with IRS e-Services for TIN matching, the Transcript Delivery System (TDS), the Income Verification Express Service (IVES), the Information Return Intake System (IRIS) for 1099 series filings, and the Modernized e-File (MeF) system for electronic tax return submission. Access requires enrollment in IRS e-Services and obtaining an API client ID.
 
-## APIs
+**Areas:** IRS · Tax · Federal Government · TIN Matching · Income Verification · Information Returns · E-File · Identity Verification · Taxpayer · Finance · Tax Filing
 
-- **TIN Matching API** - Match taxpayer name/TIN combinations against IRS records before filing information returns. Interactive (25 per session) and bulk (up to 100,000 per submission) modes available.
-- **Income Verification Express Service (IVES) API** - A2A API for authorized lenders and financial institutions to request tax transcripts for income verification. $4 per transcript.
-- **Information Return Intake System (IRIS) API** - A2A API for electronic filing of 1099 series information returns. Free for enrolled participants.
-- **Modernized e-File (MeF) API** - A2A API for electronic submission of business and individual tax returns. Free for authorized software developers.
-- **Transcript Delivery System (TDS) API** - API for authorized tax professionals to retrieve tax transcripts. Free for enrolled e-Services participants.
+## IRS on APIs.io
 
-## Getting Started
+Everything profiled for IRS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/irs/](https://apis.io/providers/irs/)** — or go straight to one of the APIs or properties below.
 
-All IRS APIs require enrollment in IRS e-Services and obtaining an API client ID.
+### APIs (5)
 
-- Developer Portal: https://www.irs.gov/tax-professionals/get-an-api-client-id
-- e-Services Enrollment: https://la.www4.irs.gov/esrv/esam/pages/landingPage.xhtml
-- e-Help Desk: 866-255-0654
+- [IRS TIN Matching API](https://apis.io/apis/irs/tin-matching/) — Allows payers to submit Taxpayer Identification Number (TIN) and name combinations to be matched against IRS records before filing information returns.…
+- [IRS Income Verification Express Service (IVES) API](https://apis.io/apis/irs/ives/) — Application-to-Application (A2A) API allowing authorized participants such as lenders, banks, credit unions, and financial institutions to request IRS tax…
+- [IRS Information Return Intake System (IRIS) API](https://apis.io/apis/irs/iris/) — Application-to-Application (A2A) API for electronic filing of 1099 series information returns directly with the IRS. Supports high-volume automated…
+- [IRS Modernized e-File (MeF) API](https://apis.io/apis/irs/mef/) — Application-to-Application (A2A) system enabling authorized software developers and transmitters to electronically submit tax returns directly to the IRS.…
+- [IRS Transcript Delivery System (TDS) API](https://apis.io/apis/irs/tds/) — e-Services API allowing authorized tax professionals and institutions to retrieve tax transcripts programmatically. Part of the IRS e-Services suite…
 
-## Authentication
+### Published properties
 
-IRS APIs use OAuth-style authentication with a Client ID and signed JWT Bearer tokens. All connections require TLS 1.2 or higher with SHA-256 or higher cryptographic signatures.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Resources
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Irs Domain Security](https://apis.io/security/irs/irs-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Irs Plans Pricing](https://apis.io/plans/irs/irs-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Irs Rate Limits](https://apis.io/rate-limits/irs/irs-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Irs Finops](https://apis.io/finops/irs/irs-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.irs.gov/)
-- [Developer Portal](https://www.irs.gov/tax-professionals/get-an-api-client-id)
-- [MeF Status Page](https://www.irs.gov/e-file-providers/modernized-e-file-mef-status)
-- [Newsroom](https://www.irs.gov/newsroom)
-- [LinkedIn](https://www.linkedin.com/company/irs)
-- [X](https://x.com/irsnews)
+- [Documentation](https://www.irs.gov/tax-professionals/get-an-api-client-id)
+- [Getting started](https://www.irs.gov/tax-professionals/get-an-api-client-id)
+- [Blog](https://www.irs.gov/newsroom)
+- [Terms of service](https://www.irs.gov/privacy-disclosure/irs-website-privacy-policy-statement)
+- [GitHub](https://github.com/IRS-Public)
+- [Status](https://www.irs.gov/e-file-providers/modernized-e-file-mef-status)
+
+## API Evangelist rating
+
+**Kin Score 19.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 15.8 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/irs/](https://apis.io/providers/irs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for IRS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/irs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
